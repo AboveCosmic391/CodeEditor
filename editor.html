@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Code Editor</title>
+
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/body.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/editor.css">
+
+</head>
+<body class="gradient-bg">
+    
+    <!-------------------------------------------------Navigation area------------------------------------------->
+    <nav>
+        <div class="home-link-holder">
+            <a href="../index.html">
+                <img src="../images/home.png" alt="Return to home page icon">
+            </a>
+            <p>Return Home</p>
+        </div>
+
+        <div class="title-holder">
+            <h1 class="th-h1">
+                Web Development Portfolio
+            </h1>
+            <h2 class="th-h2">
+                Adam Sawyer
+            </h2>
+        </div>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <!--------------------------------------------- end of navigation area ------------------------------------------->
+
+
+
+
+
+
+    <div class="editor-container">
+
+        <div class="editor-input">
+            <div class="controls">
+                <h2>
+                    Enter HTML, CSS, and JavaScript code
+                </h2>
+                <button onclick="updateOutput()">Submit Changes</button>
+            </div>
+            <div class="input-area">
+                <textarea id="html-input"></textarea>
+            </div>
+            
+        </div>
+
+        <div class="editor-output">
+            <div class="controls">
+                <h2>
+                    Preview Web Editor Output
+                </h2>
+            </div>
+            <iframe id="preview-frame" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+
+    </div>
+
+    <div class="sample-container">
+        <h2>
+            Try the following sample code:
+        </h2>
+
+        <pre>
+            <code>
+&lt;div class="blue" id="div"&gt;&lt;/div&gt;
+&lt;button onclick="color()"&gt;Change color&lt;/button&gt;
+
+&lt;style&gt;
+    .blue {
+        background-color: blue;
+        height: 200px;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+&lt;/style&gt;
+
+&lt;script&gt;
+    function color() {
+        console.log("function called");
+        var div = document.getElementById("div");
+        div.classList.add("orange");
+    }
+&lt;/script&gt;
+            </code>
+            </pre>
+            
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+
+    </footer>
+
+
+    <script src="../scripts/editor.js"></script>
+
+</body>
+</html>
